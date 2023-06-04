@@ -4,15 +4,229 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white_main_bg"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="30dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_destination"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zihuatanejo, Gro"
+            android:layout_marginStart="11dp"
+            android:textSize="15sp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_list"
+            android:layout_marginStart="8dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_filter"
+            android:layout_marginStart="76dp"
+            />
+
+    </LinearLayout>
 
     <TextView
+        android:text="Select Category"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutPlace"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="18dp"
+        style="@style/Title.TextView"
+        />
+    <TextView
+        android:id="@+id/textViewAll"
+        android:text="view all"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutPlace"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp"
+        style="@style/SeeMore.TextView"
+        />
+    <LinearLayout
+        android:id="@+id/linearLayoutCategory"
+        app:layout_constraintTop_toBottomOf="@id/textViewAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        >
+        <LinearLayout
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phones"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/category_bg_color"
+                android:padding="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phones"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="23dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_computers"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/category_bg_color"
+                android:padding="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Computer"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_health"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/category_bg_color"
+                android:padding="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="23dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_books"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/category_bg_color"
+                android:padding="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Books"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayoutSearch"
+        android:layout_width="300dp"
+        android:layout_height="34dp"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/search_bg"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="32dp"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_red"
+            android:layout_marginStart="24dp"
+            />
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:text="Search"
+            android:textColor="@color/gray_search"
+            android:background="@null"
+            android:textSize="12sp"
+            android:layout_marginStart="18dp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_catalog"
+        app:layout_constraintTop_toTopOf="@id/linearLayoutSearch"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayoutSearch"
+        app:layout_constraintStart_toEndOf="@id/linearLayoutSearch"
+        android:background="@drawable/catalog_bg"
+        android:padding="9.6dp"
+        android:layout_marginStart="11dp"
+        />
+
+    <TextView
+        android:text="Hot sales"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutSearch"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/Title.TextView"
+        android:layout_marginTop="24dp"
+        />
+
+    <TextView
+        android:id="@+id/seeMoreHotSales"
+        style="@style/SeeMore.TextView"
+        android:text="see more"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="31dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/seeMoreHotSales"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/img_iphone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New"
+            />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
