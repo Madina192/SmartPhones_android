@@ -75,8 +75,8 @@
             android:gravity="center"
 >
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
                 android:src="@drawable/ic_phones"
                 android:layout_marginBottom="28dp"
                 android:background="@drawable/category_bg_color"
@@ -97,8 +97,8 @@
             android:layout_marginHorizontal="23dp"
             >
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
                 android:src="@drawable/ic_computers"
                 android:layout_marginBottom="28dp"
                 android:background="@drawable/category_bg_color"
@@ -118,8 +118,8 @@
             android:gravity="center"
             >
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
                 android:src="@drawable/ic_health"
                 android:layout_marginBottom="28dp"
                 android:background="@drawable/category_bg_color"
@@ -140,8 +140,8 @@
             android:layout_marginStart="23dp"
             >
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
                 android:src="@drawable/ic_books"
                 android:layout_marginBottom="28dp"
                 android:background="@drawable/category_bg_color"
@@ -175,7 +175,7 @@
             />
         <EditText
             android:layout_width="220dp"
-            android:layout_height="20dp"
+            android:layout_height="30dp"
             android:text="Search"
             android:textColor="@color/gray_search"
             android:background="@null"
@@ -214,19 +214,90 @@
         android:layout_marginTop="31dp"
         />
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/seeMoreHotSales"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/img_iphone"
+        android:id="@+id/linearLayoutIphone"
+        android:layout_width="170dp"
+        android:layout_height="182dp"
+        app:layout_constraintTop_toTopOf="@+id/shapeableImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/linear_layout_corners"
+        android:paddingStart="30dp"
+        android:orientation="vertical"
         >
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="New"
+            android:background="@drawable/catalog_bg"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New"
+            android:text="Iphone 12"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Súper. Mega. Rápido."
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:layout_marginTop="5dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Base.Button"
+            android:text="Buy now!"
+            android:layout_marginTop="25dp"
             />
 
     </LinearLayout>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/seeMoreHotSales"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/img_iphone"
+        app:shapeAppearanceOverlay="@style/RoundedImage"
+        android:layout_marginTop="18dp"
+        />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best Seller"
+        style="@style/Title.TextView"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutIphone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        />
+    <TextView
+        android:id="@+id/seeMoreBestSellers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="see more"
+        style="@style/SeeMore.TextView"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutIphone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBestSellers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/seeMoreBestSellers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/item_phone"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
