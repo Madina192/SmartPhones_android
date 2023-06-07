@@ -13,9 +13,12 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -31,27 +34,6 @@
         app:menu="@menu/bottom_nav_menu"
 
         >
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="68dp"-->
-<!--            android:gravity="center_vertical"-->
-<!--            >-->
-<!--            <View-->
-<!--                android:layout_width="8dp"-->
-<!--                android:layout_height="8dp"-->
-<!--                android:background="@drawable/white_point"-->
-<!--                />-->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Explorer"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="15dp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:layout_marginStart="7dp"-->
-<!--                />-->
-<!--        </LinearLayout>-->
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
