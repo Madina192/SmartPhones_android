@@ -8,4 +8,7 @@
     <color name="title_color">#010035</color>
     <color name="black_box">#101010</color>
     <color name="gray_price">#CCCCCC</color>
+    <color name="gray_descr">#B7B7B7</color>
+    <color name="brown_choose">#772D03</color>
+    <color name="gray_ssd">#8D8D8D</color>
 </resources>
