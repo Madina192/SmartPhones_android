@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartphones.adapter.PhoneAdapter
 
@@ -24,7 +25,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         addElements()
-        adapter = PhoneAdapter(arrayList)
+        adapter = PhoneAdapter(arrayList) {
+            val bundle  = Bundle()
+            val detailFragment = DetailFragment()
+            bundle.putParcelable("phone", it)
+            detailFragment.arguments = bundle
+            findNavController().navigate(R.id.action_homeFragment_to_detailFragment,bundle )
+        }
+
         val recyclerView = requireActivity().findViewById<RecyclerView>(R.id.recyclerViewBestSellers)
         recyclerView.adapter = adapter
     }

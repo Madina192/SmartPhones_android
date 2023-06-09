@@ -6,7 +6,9 @@ import com.example.smartphones.Phone
 import com.example.smartphones.R
 import com.example.smartphones.databinding.ItemPhoneBinding
 
-class PhoneAdapter(private val arrayList: ArrayList<Phone>) : RecyclerView.Adapter<PhoneAdapter.PhoneViewHolder>() {
+class PhoneAdapter(private val arrayList: ArrayList<Phone>,var onClick : (Phone) -> Unit) : RecyclerView.Adapter<PhoneAdapter.PhoneViewHolder>() {
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhoneViewHolder {
         return PhoneViewHolder(ItemPhoneBinding.inflate(LayoutInflater.from(parent.context), parent, false))
@@ -18,6 +20,9 @@ class PhoneAdapter(private val arrayList: ArrayList<Phone>) : RecyclerView.Adapt
 
     override fun onBindViewHolder(holder: PhoneViewHolder, position: Int) {
         holder.onBind(arrayList[position])
+        holder.itemView.setOnClickListener{
+            onClick(arrayList[position])
+        }
     }
 
     inner class PhoneViewHolder(private val binding : ItemPhoneBinding) : RecyclerView.ViewHolder(binding.root) {
