@@ -9,4 +9,6 @@ data class Phone(var image : Int,
             var price : String,
             var oldPrice : String,
             var isFavourite: Boolean,
-            var isInCart : Boolean) : Parcelable
+            var isInCart : Boolean,
+                 var isBestSeller : Boolean
+                 ) : Parcelable

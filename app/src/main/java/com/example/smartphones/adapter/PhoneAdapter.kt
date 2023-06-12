@@ -6,9 +6,7 @@ import com.example.smartphones.Phone
 import com.example.smartphones.R
 import com.example.smartphones.databinding.ItemPhoneBinding
 
-class PhoneAdapter(private val arrayList: ArrayList<Phone>,var onClick : (Phone) -> Unit) : RecyclerView.Adapter<PhoneAdapter.PhoneViewHolder>() {
-
-
+class PhoneAdapter(private var arrayList: ArrayList<Phone>, var onClick : (Phone) -> Unit) : RecyclerView.Adapter<PhoneAdapter.PhoneViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhoneViewHolder {
         return PhoneViewHolder(ItemPhoneBinding.inflate(LayoutInflater.from(parent.context), parent, false))
@@ -38,5 +36,10 @@ class PhoneAdapter(private val arrayList: ArrayList<Phone>,var onClick : (Phone)
                 binding.imageViewLike.setImageResource(R.drawable.ic_like_red)
             }
         }
+    }
+
+    fun setFilteredList(arrayList: ArrayList<Phone>){
+        this.arrayList = arrayList
+        notifyDataSetChanged()
     }
 }
