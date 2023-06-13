@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/title_color"
+    android:padding="12dp"
+    >
+<com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/imageViewImage"
+    android:layout_width="88dp"
+    android:layout_height="88dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:src="@drawable/img_samsung_note"
+    app:shapeAppearanceOverlay="@style/RoundedImageInCart"
+    android:scaleType="centerCrop"
+    />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewImage"
+        android:text="Galaxy Note 20 Ultra"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:maxWidth="156dp"
+        android:layout_marginStart="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$3000.00"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/textViewName"
+        app:layout_constraintTop_toBottomOf="@id/textViewName"
+        />
+
+    <LinearLayout
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textViewName"
+        app:layout_constraintTop_toTopOf="@id/textViewName"
+        android:orientation="vertical"
+        android:background="@drawable/counter_bg"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="32dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
