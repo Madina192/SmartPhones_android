@@ -20,20 +20,79 @@
         android:layout_marginTop="20dp"
         />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCart"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/textViewCart"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_phone_in_cart"
+        tools:itemCount="2"
+        android:background="@color/title_color"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewCart"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/title_color"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
         >
-        <androidx.recyclerview.widget.RecyclerView
+
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_phone_in_cart"
-            />
+            android:layout_marginStart="32dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$6,000 us"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="215dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_del_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="215dp"
+                />
+        </LinearLayout>
+
+
 
     </LinearLayout>
 

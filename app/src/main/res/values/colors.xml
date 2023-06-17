@@ -12,4 +12,5 @@
     <color name="brown_choose">#772D03</color>
     <color name="gray_ssd">#8D8D8D</color>
     <color name="gray_counter">#282843</color>
+    <color name="gray_line">#404067</color>
 </resources>
