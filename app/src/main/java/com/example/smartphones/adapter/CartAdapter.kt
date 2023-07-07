@@ -1,26 +1,41 @@
 package com.example.smartphones.adapter
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.smartphones.Phone
 import com.example.smartphones.databinding.ItemPhoneInCartBinding
 
-class CartAdapter : Adapter<ViewHolder>() {
+class CartAdapter(private val list: ArrayList<Phone>) : Adapter<CartAdapter.CartViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
+        return CartViewHolder(
+            ItemPhoneInCartBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
+    }
+
+    override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
+        holder.onBind(list[position])
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return list.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
-    }
-
-    inner class CartViewHolder(private val binding: ItemPhoneInCartBinding) : ViewHolder(binding.root){
-
+    inner class CartViewHolder(private val binding: ItemPhoneInCartBinding) :
+        ViewHolder(binding.root) {
+        fun onBind(phone: Phone) {
+            if (phone.isInCart) {
+                binding.textViewName.text = phone.name
+                binding.imageViewImage.setImageResource(phone.image)
+                binding.tvPrice.text = phone.price
+            }
+        }
     }
 
 }

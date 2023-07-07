@@ -9,7 +9,6 @@ import com.example.smartphones.databinding.FragmentCartBinding
 
 class CartFragment : Fragment() {
     private lateinit var binding : FragmentCartBinding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
