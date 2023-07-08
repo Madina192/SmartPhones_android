@@ -46,8 +46,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun addElements(){
-        arrayList.add(Phone(R.drawable.img_samsung_galaxy, "Samsung Galaxy s20 Ultra", "$1,047", "$1,500", false, false, false))
-        arrayList.add(Phone(R.drawable.img_xiaomi, "Xiaomi Mi 10 Pro", "$300", "$400", false, false, false))
+        arrayList.add(Phone(R.drawable.img_samsung_galaxy, "Samsung Galaxy s20 Ultra", "$1,047", "$1,500", false, true, false))
+        arrayList.add(Phone(R.drawable.img_xiaomi, "Xiaomi Mi 10 Pro", "$300", "$400", false, true, false))
         arrayList.add(Phone(R.drawable.img_samsung_note, "Samsung Note 20 Ultra", "$1, 047", "$1, 500", false, false, false))
         arrayList.add(Phone(R.drawable.img_motorola, "Motorola One Edge ", "$300", "$400", false, false, false))
     }

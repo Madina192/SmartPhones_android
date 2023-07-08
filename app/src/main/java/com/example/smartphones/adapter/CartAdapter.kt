@@ -4,10 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.smartphones.HomeFragment
 import com.example.smartphones.Phone
 import com.example.smartphones.databinding.ItemPhoneInCartBinding
 
-class CartAdapter(private val list: ArrayList<Phone>) : Adapter<CartAdapter.CartViewHolder>() {
+class CartAdapter() : Adapter<CartAdapter.CartViewHolder>() {
+
+    private val list = arrayListOf<Phone>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
         return CartViewHolder(
