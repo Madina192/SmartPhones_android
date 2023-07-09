@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.smartphones.adapter.PhoneAdapter
 import com.example.smartphones.databinding.FragmentHomeBinding
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.util.Locale
 
 class HomeFragment : Fragment() {
@@ -18,6 +20,7 @@ class HomeFragment : Fragment() {
     private var arrayList : ArrayList<Phone> = ArrayList()
     lateinit var adapter : PhoneAdapter
     private lateinit var searchView : SearchView
+    private val db = Firebase.firestore
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +46,11 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = adapter
 
         searchByName()
+        setData()
+    }
+
+    private fun setData() {
+
     }
 
     private fun addElements(){
