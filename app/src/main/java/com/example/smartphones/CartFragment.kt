@@ -9,7 +9,7 @@ import com.example.smartphones.adapter.CartAdapter
 import com.example.smartphones.databinding.FragmentCartBinding
 
 class CartFragment : Fragment() {
-    private lateinit var binding : FragmentCartBinding
+    private lateinit var binding: FragmentCartBinding
     private val adapter = CartAdapter()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

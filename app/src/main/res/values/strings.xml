@@ -2,4 +2,12 @@
     <string name="app_name">SmartPhones</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="galaxy_note_20_ultra">Galaxy Note 20 Ultra</string>
+    <string name="_3000_00">$3000.00</string>
+    <string name="delivery">Delivery</string>
+    <string name="free">Free</string>
+    <string name="_6_000_us">$6,000 us</string>
+    <string name="total">Total</string>
+    <string name="checkout">Checkout</string>
+    <string name="my_cart">My Cart</string>
 </resources>
